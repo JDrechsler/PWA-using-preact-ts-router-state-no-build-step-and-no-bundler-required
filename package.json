@@ -1,0 +1,17 @@
+{
+  "name": "buildless",
+  "version": "1.0.0",
+  "description": "Use pika cdn to pull new es6modules, node_modules are only used for typings",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "preact": "8.5.2",
+    "preact-router": "2.6.1",
+    "preact-async-route": "2.2.1",
+    "z-preact-easy-state": "6.0.12"
+  }
+}
