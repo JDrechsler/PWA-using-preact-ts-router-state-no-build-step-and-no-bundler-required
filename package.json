@@ -6,12 +6,11 @@
   "scripts": {
     "tsc": "tsc -w"
   },
-  "author": "",
+  "author": "JDrechslerUS",
   "license": "ISC",
   "dependencies": {
-    "preact": "8.5.2",
-    "preact-router": "2.6.1",
-    "preact-async-route": "2.2.1",
+    "preact": "10.0.5",
+    "preact-router": "3.1.0",
     "z-preact-easy-state": "6.0.12"
   }
 }

@@ -8,17 +8,23 @@
 
     <link rel="stylesheet" href="./src/styles/style.css" />
 
+    <!--
+      preact/compat and preact/hooks are needed for new lazy loading in react/preact X
+    -->
     <script type="importmap">
       {
         "imports": {
-          "preact": "https://unpkg.com/preact@10.0.4/dist/preact.module.js?module",
-          "preact-router": "https://unpkg.com/preact-router@3.1.0/dist/preact-router.es.js"
+          "preact": "https://unpkg.com/preact@10.0.5/dist/preact.module.js?module",
+          "preact-router": "https://unpkg.com/preact-router@3.1.0/dist/preact-router.es.js",
+          "preact/compat": "https://unpkg.com/preact@10.0.5/compat/dist/compat.module.js",
+          "preact/hooks": "https://unpkg.com/preact@10.0.5/hooks/dist/hooks.module.js"
         }
       }
     </script>
   </head>
   <body>
     <div id="app"></div>
+    <!-- When bundling with parcel remove type -> will be fixed in a future version according to parcel -->
     <script type="module" src="./dist/index.js"></script>
   </body>
 </html>

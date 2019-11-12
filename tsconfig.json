@@ -8,6 +8,7 @@
     "jsx": "react",
     "module": "esnext",
     "jsxFactory": "h",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "sourceMap": true
   }
 }
