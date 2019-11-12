@@ -33,4 +33,3 @@ ES6 modules and no bundler required thanks to the latest import maps flag in chr
 - install parcel bundler npm install -g parcel-bundler
 - node_modules folder is used for typings and as source for lib files for the bundler
 - parcel index.html or parcel watch index.html or parcel build index.html (read more here: https://parceljs.org/)
-- bundling with parcel will complain about type="module" -> removing it will fix the issue / will be fixed in a future version of parcel according to parcel
