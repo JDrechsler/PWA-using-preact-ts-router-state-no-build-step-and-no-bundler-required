@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <div>
         <NavBar />
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<div></div>}>
           <Router>
             <Route path="/" component={Home} />
             <Route path="/pizza" component={LazyPizzaPage} />
