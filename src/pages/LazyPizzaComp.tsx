@@ -2,11 +2,10 @@ import { Component, h } from 'preact';
 import { customStore } from './../store/customStore.js';
 import { view } from 'z-preact-easy-state';
 
-class LazyPizza extends Component {
-
+class LazyPizzaComp extends Component {
   btnClick() {
-    console.log("Click")
-    customStore.btnClicked += 1
+    console.log('Click');
+    customStore.btnClicked += 1;
   }
 
   render() {
@@ -20,4 +19,4 @@ class LazyPizza extends Component {
   }
 }
 
-export default view(LazyPizza)
+export default view(LazyPizzaComp);

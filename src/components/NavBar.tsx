@@ -13,6 +13,9 @@ export const NavBar = () => (
       <Link activeClassName="active" href="/test">
         Test
       </Link>
+      <Link activeClassName="active" href="/lazy">
+        Lazy
+      </Link>
     </nav>
   </header>
 );

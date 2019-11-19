@@ -1,20 +1,32 @@
 import { h, render, Component } from 'preact';
-import Router from 'preact-router';
+import Router, { Route } from 'preact-router';
+import { Suspense, lazy } from 'preact/compat';
 import { Home } from './pages/Home.js';
 import { NavBar } from './components/navbar.js';
-import { Pizza } from './pages/Pizza.js';
-import Test from './pages/Test.js';
+
+const LazyPage = lazy(() => import('./pages/Lazy.js'));
+const LazyPizzaPage = lazy(() => import('./pages/Pizza.js'));
+const LazyTestPage = lazy(() => import('./pages/Test.js'));
+const NotFound = () => (
+  <section>
+    <h2>Not Found</h2>
+  </section>
+);
 
 class App extends Component {
   render() {
     return (
       <div>
         <NavBar />
-        <Router>
-          <Home path="/" />
-          <Pizza path="/pizza" />
-          <Test path="/test" />
-        </Router>
+        <Suspense fallback={<p>Loading...</p>}>
+          <Router>
+            <Route path="/" component={Home} />
+            <Route path="/pizza" component={LazyPizzaPage} />
+            <Route path="/test" component={LazyTestPage} />
+            <Route path="/lazy" component={LazyPage} />
+            <Route default component={NotFound} />
+          </Router>
+        </Suspense>
       </div>
     );
   }
