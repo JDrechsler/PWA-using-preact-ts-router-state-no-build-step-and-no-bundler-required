@@ -8,12 +8,54 @@ class LazyPage extends Component {
     customStore.btnClicked += 1;
   }
   render() {
+    const myStyle = {
+      color: 'chocolate',
+      backgroundColor: 'azure'
+    };
+
+    const myStyles = {
+      blueBackground: {
+        backgroundColor: 'blue'
+      },
+      whiteBackground: {
+        backgroundColor: 'white',
+        color: 'black'
+      },
+      redishBackground: {
+        backgroundColor: '#ffebeb'
+      }
+    };
+
+    function myCSS(myColor: string) {
+      return {
+        test: {
+          color: myColor
+        },
+        test2: {
+          color: myColor,
+          backgroundColor: 'darksalmon'
+        }
+      };
+    }
+
     return (
       <section>
-        <h2>Lazy</h2>
-        <p>Your favorite food is: {customStore.favFood}</p>
-        <p>Button clicked: {customStore.btnClicked}</p>
-        <button onClick={this.btnClick}>Click me</button>
+        <h2 style={myStyle} class="hmmm">
+          Lazy
+        </h2>
+        <p style={myCSS('cornflowerblue').test}>
+          Your favorite food is: {customStore.favFood}
+        </p>
+        <p
+          style={
+            customStore.btnClicked < 5 ? myCSS('black').test : myCSS('red').test
+          }
+        >
+          Button clicked: {customStore.btnClicked}
+        </p>
+        <button style={myStyles.redishBackground} onClick={this.btnClick}>
+          Click me
+        </button>
       </section>
     );
   }
