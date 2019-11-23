@@ -9,6 +9,6 @@
     "module": "esnext",
     "jsxFactory": "h",
     "sourceMap": true,
-    "baseUrl": "C:/Users/drec021/AppData/Roaming/npm/node_modules/"
+    "baseUrl": "C:/Users/JD/AppData/Roaming/npm/node_modules/"
   }
 }

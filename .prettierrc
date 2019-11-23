@@ -2,5 +2,7 @@
   "singleQuote": true,
   "semi": true,
   "useTabs": false,
-  "proseWrap": "never"
+  "proseWrap": "never",
+  "printWidth": 1000000000,
+  "jsxBracketSameLine": true
 }
