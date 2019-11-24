@@ -1,9 +1,10 @@
 import { Component, h } from 'preact';
 import { Suspense, lazy } from 'preact/compat';
+import { view } from 'z-preact-easy-state';
 
 const LazyPizzaComp = lazy(() => import('./LazyPizzaComp.js'));
 
-export default class Pizza extends Component {
+class Pizza extends Component {
   render() {
     return (
       <section>
@@ -16,3 +17,5 @@ export default class Pizza extends Component {
     );
   }
 }
+
+export default view(Pizza);

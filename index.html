@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Preact instant</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Preact instant</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="./src/styles/globalStyles.css" crossorigin="anonymous" />
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://unpkg.com" />
 
-  <!-- Preconnects -->
-  <link rel="preconnect" href="https://unpkg.com" />
+    <!-- Preloads -->
+    <link rel="preload" href="src/styles/globalStyles.css" as="style" crossorigin="anonymous" />
 
-  <!-- Preloads -->
-  <link rel="preload" href="src/styles/globalStyles.css" as="style" crossorigin="anonymous" />
+    <link rel="preload" href="https://unpkg.com/preact@10.0.5/dist/preact.module.js?module" as="script" crossorigin="anonymous" />
+    <link rel="preload" href="https://unpkg.com/preact-router@3.1.0/dist/preact-router.es.js" as="script" crossorigin="anonymous" />
+    <link rel="preload" href="https://unpkg.com/preact@10.0.5/compat/dist/compat.module.js" as="script" crossorigin="anonymous" />
+    <link rel="preload" href="https://unpkg.com/preact@10.0.5/hooks/dist/hooks.module.js" as="script" crossorigin="anonymous" />
 
-  <link rel="preload" href="https://unpkg.com/preact@10.0.5/dist/preact.module.js?module" as="script" crossorigin="anonymous" />
-  <link rel="preload" href="https://unpkg.com/preact-router@3.1.0/dist/preact-router.es.js" as="script" crossorigin="anonymous" />
-  <link rel="preload" href="https://unpkg.com/preact@10.0.5/compat/dist/compat.module.js" as="script" crossorigin="anonymous" />
-  <link rel="preload" href="https://unpkg.com/preact@10.0.5/hooks/dist/hooks.module.js" as="script" crossorigin="anonymous" />
+    <link rel="preload" href="dist/pages/Home.js" as="script" crossorigin="anonymous" />
+    <link rel="preload" href="dist/components/navbar.js" as="script" crossorigin="anonymous" />
+  </head>
 
-  <link rel="preload" href="dist/pages/Home.js" as="script" crossorigin="anonymous" />
-  <link rel="preload" href="dist/components/navbar.js" as="script" crossorigin="anonymous" />
-</head>
+  <body>
+    <div id="app"></div>
 
-<body>
-  <div id="app"></div>
-
-  <!--
+    <!--
       preact/compat and preact/hooks are needed for new lazy loading in react/preact X
     -->
-  <script type="importmap">
+    <script type="importmap">
       {
         "imports": {
           "preact": "https://unpkg.com/preact@10.0.5/dist/preact.module.js?module",
@@ -47,7 +46,6 @@
       }
     </script>
 
-  <script type="module" src="./dist/index.js"></script>
-</body>
-
+    <script type="module" src="./dist/index.js"></script>
+  </body>
 </html>

@@ -7,6 +7,7 @@ import { NavBar } from './components/navbar.js';
 const LazyPage = lazy(() => import('./pages/Lazy.js'));
 const LazyPizzaPage = lazy(() => import('./pages/Pizza.js'));
 const LazyTestPage = lazy(() => import('./pages/Test.js'));
+const LazyAIPage = lazy(() => import('./pages/AI.js'));
 const NotFound = () => (
   <section>
     <h2>Not Found</h2>
@@ -24,6 +25,7 @@ class App extends Component {
             <Route path="/pizza" component={LazyPizzaPage} />
             <Route path="/test" component={LazyTestPage} />
             <Route path="/lazy" component={LazyPage} />
+            <Route path="/ai" component={LazyAIPage} />
             <Route default component={NotFound} />
           </Router>
         </Suspense>

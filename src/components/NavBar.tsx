@@ -4,18 +4,11 @@ import { Link } from 'preact-router';
 export const NavBar = () => (
   <header>
     <nav>
-      <Link activeClassName="active" href="/">
-        Home
-      </Link>
-      <Link activeClassName="active" href="/pizza">
-        Pizza
-      </Link>
-      <Link activeClassName="active" href="/test">
-        Test
-      </Link>
-      <Link activeClassName="active" href="/lazy">
-        Lazy
-      </Link>
+      <a href="/">Home</a>
+      <a href="/pizza">Pizza</a>
+      <a href="/test">Test</a>
+      <a href="/lazy">Lazy</a>
+      <a href="/ai">AI</a>
     </nav>
   </header>
 );
